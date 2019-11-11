@@ -49,7 +49,7 @@ func init() {
 }
 
 // Get returns the current wallpaper.
-func Get() (string, error) {
+func Get() (interface{}, error) {
 	if isGNOMECompliant() {
 		return parseDconf("gsettings", "get", "org.gnome.desktop.background", "picture-uri")
 	}
